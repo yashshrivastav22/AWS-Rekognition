@@ -20,10 +20,6 @@
    <script>
        function search() {
            var objectName = document.getElementById('objectName').value;
-           if (!objectName) {
-               alert('Please enter an object name');
-               return;
-           }
            fetch('/search?object_name=' + objectName)
                .then(response => response.json())
                .then(data => {
