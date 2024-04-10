@@ -5,8 +5,8 @@ import uuid
 app = Flask(__name__)
 
 # AWS credentials
-AWS_ACCESS_KEY_ID = 'AKIAYS2NXC35VLOOTJ6Q'
-AWS_SECRET_ACCESS_KEY = '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'
+AWS_ACCESS_KEY_ID = ''
+AWS_SECRET_ACCESS_KEY = ''
 AWS_REGION = 'us-east-1'
 
 # Initialize AWS Rekognition client
