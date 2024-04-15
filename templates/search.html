@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Objects</title>
+</head>
+<body>
+    <h1>Search Objects</h1>
+    <form action="/search" method="post">
+        <input type="hidden" name="job_id" value="{{ job_id }}">
+        <label for="object_name">Object Name:</label>
+        <input type="text" name="object_name" id="object_name">
+        <button type="submit">Search</button>
+    </form>
+</body>
+</html>
