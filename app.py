@@ -5,8 +5,8 @@ import boto3
 import time
 
 # AWS Configuration
-AWS_ACCESS_KEY_ID = 'AKIAQRII2MIVYFKEYHW6'
-AWS_SECRET_ACCESS_KEY = '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'
+AWS_ACCESS_KEY_ID = ''
+AWS_SECRET_ACCESS_KEY = ''
 AWS_REGION = 'us-east-1'
 
 # Initialize AWS Rekognition client
