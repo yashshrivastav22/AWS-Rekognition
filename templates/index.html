@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Object Detection</title>
+</head>
+<body>
+  <h1>Detected Objects</h1>
+  <ul id="objects-list"></ul>
+  
+  <h1>Timeline</h1>
+  <div id="timeline"></div>
+  
+  <script>
+    function fetchObjects() {
+      fetch('/objects')
+        .then(response => response.json())
+        .then(data => {
+          const objectsList = document.getElementById('objects-list');
+          objectsList.innerHTML = '';
+          data.objects.forEach(object => {
+            const listItem = document.createElement('li');
+            listItem.textContent = object;
+            objectsList.appendChild(listItem);
+          });
+        });
+    }
+
+    function fetchTimeline() {
+      fetch('/timeline')
+        .then(response => response.json())
+        .then(data => {
+          const timelineDiv = document.getElementById('timeline');
+          timelineDiv.innerHTML = '';
+          data.timeline.forEach(entry => {
+            const timestamp = new Date(entry.timestamp * 1000).toLocaleTimeString();
+            const objects = entry.objects.join(', ');
+            const timelineEntry = document.createElement('p');
+            timelineEntry.textContent = `${timestamp}: ${objects}`;
+            timelineDiv.appendChild(timelineEntry);
+          });
+        });
+    }
+
+    // Fetch objects and timeline every 5 seconds
+    setInterval(() => {
+      fetchObjects();
+      fetchTimeline();
+    }, 5000);
+
+    // Initial fetch
+    fetchObjects();
+    fetchTimeline();
+  </script>
+</body>
+</html>
