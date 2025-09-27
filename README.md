@@ -35,7 +35,6 @@ AWS-Rekognition/
 │── app.py # Flask server, camera capture, Rekognition calls, endpoints
 │── templates/
 │ └── index.html # Minimal UI for viewing detections
-│ └── Final_Diagram.jpg # System architecture diagram
 │── README.md # This file
 ```
 
