@@ -18,7 +18,7 @@ This project is a **Flask-based web app** that uses **AWS Rekognition** to analy
 ## 🏗️ Architecture
 The system works by capturing webcam frames, sending them to **AWS Rekognition** for analysis, and returning object labels to the user through the Flask interface.
 
-![Architecture Diagram](./Diagram/Final_Diagram.jpg)
+![Architecture Diagram](https://github.com/yashshrivastav22/Images/blob/main/AWS-Rekognition/Final_Diagram.jpg)
 
 ## 🛠️ Tech Stack
 - **Backend:** Python, Flask  
